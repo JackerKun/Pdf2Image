@@ -1,4 +1,7 @@
-﻿using System;
+﻿using iTextSharp.text;
+using Pdf2Image;
+using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -6,10 +9,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string file = "c:\\tmp\\Comprovativo.pdf";
-            var t = Pdf2Image.PdfSplitter.GetImages(file, Pdf2Image.PdfSplitter.Scale.High);
+            string file = "c:\\tmp\\test.pdf";
+            List<System.Drawing.Image> images = PdfSplitter.GetImages(file, PdfSplitter.Scale.High);
 
-            Pdf2Image.PdfSplitter.WriteImages(file, "c:\\tmp", Pdf2Image.PdfSplitter.Scale.High, Pdf2Image.PdfSplitter.CompressionLevel.Medium);
+            PdfSplitter.WriteImages(file, "c:\\tmp", PdfSplitter.Scale.High, PdfSplitter.CompressionLevel.Medium);
         }
     }
 }

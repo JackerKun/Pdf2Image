@@ -6,6 +6,7 @@
     <Authors>Kabindas</Authors>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>Generates images (jpg) from a pdf file, one per page</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
